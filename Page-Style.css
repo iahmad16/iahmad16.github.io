@@ -1,0 +1,67 @@
+h1 {
+    font-size: 50px;
+    font-family: Consolas, Arial;
+    font-weight: bold;
+    color: rgb(26, 113, 119);
+    text-align: center;
+    border: 3px solid rgb(26, 26, 26);
+    background-color: rgb(26, 26, 26);
+}
+
+li {
+    font-size: 20px;
+    font-family: Consolas,Arial;
+    font-weight: bold;
+    color: dimgrey;
+}
+
+#div1
+{
+    width: 450px;
+    height: 150px;
+    background-color: rgba(32, 32, 32, 0.5);
+}
+
+div {
+    width: 150;
+    height: 300;
+    padding: 20px;
+    margin-left: 0px;
+    margin-top: 10px;
+    border: 3px solid rgb(26, 26, 26,0.5);
+    background-color: rgba(26, 26, 26, 0.5);
+}
+
+
+
+#wee 
+{
+    border: 3px solid rgb(26, 26, 26,0.5);
+    background-color: rgb(26, 26, 26,0.5);
+}   
+
+a {
+    font-family: Consolas, Arial; 
+    color: rgb(255, 255, 255);
+}
+
+a[href="pic.jpg"]
+{
+    color: rgb(32, 82, 190);
+}
+
+body
+{
+    background-image: url('dd.jpg');
+    background-size: cover;
+}
+
+.baz
+{
+    color: rgb(255, 255, 255);
+}
+
+#age
+{
+    color: rgb(255, 255, 255);
+}

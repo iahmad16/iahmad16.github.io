@@ -89,11 +89,16 @@ var tl2 = gsap.timeline({
 
 tl2.to("#center", {duration: 0.3, right: "300%", ease: "Expo.easeInOut"});
 tl2.to("#download-details", {duration: 0.5, left: "200%", opacity: 0, ease: "Expo.easeInOut", delay: -0.3},'ace2');
-// tl2.to("#DownloadApp h1", {duration: 0.5, left: "200%", opacity: 0, ease: "Expo.easeInOut", delay: -0.3},'ace2');
-// tl2.to("#DownloadApp h3", {duration: 0.5, left: "200%", opacity: 0, ease: "Expo.easeInOut", delay: -0.3}, 'ace2');
-// tl2.to("#DownloadApp #buttons", {duration: 0.5, left: "200%", opacity: 0, ease: "Expo.easeInOut", delay: -0.3}, 'ace2');
 
-tl2.to("#alwakalat-card-details", {duration: 1, left: "20%", opacity: 2, ease: "Expo.easeInOut", delay: -0.3});
-// tl2.to("#AlwakalatCard h1", {duration: 0.5, right: "200%", opacity: 1, ease: "Expo.easeInOut", delay: -0.3},'ace3');
-// tl2.to("#AlwakalatCard h3", {duration: 0.5, right: "200%", opacity: 1, ease: "Expo.easeInOut", delay: -0.3},'ace3');
-// tl2.to("#AlwakalatCard buttons", {duration: 0.5, right: "200%", opacity: 1, ease: "Expo.easeInOut", delay: -0.3},'ace3');
+var tl3 = gsap.timeline({
+    scrollTrigger:{
+    trigger: "#AlwakalatCard",
+    start: "-85% 10%",
+    end: "100% 50%",
+    scrub: true,
+    // sync: true,
+    markers: true,
+    }
+});
+
+tl3.to("#alwakalat-card-details", {duration: 1, left: "20%", opacity: 2, ease: "Expo.easeInOut", delay: -0.3});

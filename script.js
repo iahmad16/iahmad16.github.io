@@ -66,7 +66,7 @@ tl.to("h1", {duration: 0.5, top: "-20%"},'ace');
 tl.to("h3", {duration: 0.5, top: "-20%"}, 'ace');
 tl.to("#buttons", {duration: 0.5, top: "-20%"}, 'ace');
 
-tl.to("#center", {duration: 3, right: "110%", y: "80%", zIndex: 3, ease: "Expo.easeInOut"});
+tl.to("#center", {duration: 3, right: "110%", y: "90%", zIndex: 3, ease: "Expo.easeInOut"});
 tl.to("#first-left", {opacity: 0,duration: 1.5, left: "70%", right: "30%", ease: "Expo.easeInOut", delay: -3});
 tl.to("#first-right", {opacity: 0,duration: 1.5, right: "70%", ease: "Expo.easeInOut", delay: -3});
 tl.to("#second-left", {opacity: 0,duration: 1.5, left: "110%", ease: "Expo.easeOut", delay: -2});

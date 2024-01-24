@@ -1,67 +1,161 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>Imaaz's Page</title>
-
-        <!-- <style>
-             h1 {
-                font-size: size 10;
-                font-family: Arial, Helvetica, sans-serif;
-                font-weight: bold;
-                color: dimgrey;
-                text-align: center;
-            }
-
-            li {
-                font-size: size 10;
-                font-family: Arial, Helvetica, sans-serif;
-                font-weight: bold;
-                color: dimgrey;
-            }
-
-        </style> -->
-
-        <link rel="stylesheet" href="Page-Style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" type="image/png" href="images/alwakalat_logo.png">
+        
+        <link rel="stylesheet" href="styles.css">
+        <title>Alwakalat Testing</title>
     </head>
-
     <body>
+        <header>
+            <img id="logo" onclick="scrollToPage(`Home`)" src="images/alwakalat_logo.png" alt="Alwakalat logo">
+            <nav>
+                <ul class="nav-links">
+                    <li><p onclick="scrollToPage(`Project`)">The Project</p></li>
+                    <li><p onclick="scrollToPage(`Partners`)">Partners</p></li>
+                    <li><p onclick="scrollToPage(`AlwakalatCard`)">Alwakalat Card</p></li>
+                    <li><p onclick="scrollToPage(`Team`)">Team</p></li>
+                    <li><p onclick="scrollToPage(`ContactUs`)">Contact Us</p></li>
+                </ul>
+            </nav>
+            <button onclick="scrollToPage(`DownloadApp`)">Get the app</button>
+        </header>
         
-        <h1>Welcome to my webpage!</h1>
-        
-        <h3 style="color: rgb(255, 255, 255); font-family: Consolas, Arial;">This is also a heading but smaller</h3>
+        <main>
+            <section id="Home" class="section">
+                <h1>Elevate Your Automotive Experience</h1>
+                <h3>Discover a New Era of Automotive Convenience</h3>
+                <br>
+                <div id="buttons">
+                    <button onclick="scrollToPage(`DownloadApp`)">Download The App</button>
+                    <button onclick="scrollToPage(`AlwakalatCard`)">Get The Alwakalat Card</button>
+                </div>
+            
+                <div id="images">
+                    <img id="second-left" src="images/Second left_.png" alt="Alwakalat App">
+                    <img id="first-left" src="images/First left_.png" alt="Alwakalat App">
+                    <img id="center" src="images/center_.png" alt="Alwakalat App">
+                    <img id="first-right" src="images/First right_.png" alt="Alwakalat App">
+                    <img id="second-right" src="images/Second right_.png" alt="Alwakalat App">
+                </div>
+            </section>
+    
+            <section id="DownloadApp" class="section">
+                <div id="download-details">
+                    <h1>Download the App Now</h1>
+                    <h3>Explore a variety of curated used and new cars, and enjoy exclusive discounts from service providers with the Alwakalat Card.</h3>
+                    <div id="buttons">
+                        <button>Download The App</button>
+                        <button onclick="scrollToPage(`AlwakalatCard`)" >Get the Alwakalat Card</button>
+                    </div>
+                </div>    
+                <div id="red-box"></div>
+            </section>
+    
+            <section id="Project" class="section">
+                <h1>The Project</h1>
+            </section>
+            
+            <section id="Partners" class="section">
+                <h1>Partners</h1>
+            </section>
+            
+            <section id="AlwakalatCard" class="section">
+                <div id="alwakalat-card-details">
+                    <h1>Alwakalat Card</h1>
+                    <h3>Get the Alwakalat Card Now, And Enjoy up to 100% discounts from different service providers in town.</h3>
+                    <br>
+                    <div id="buttons">
+                        <button>GET THE ALWAKALAT CARD NOW</button>
+                        <button>BECOME A PARTNER</button>
+                    </div>
+                </div>
+            </section>
+        </main>
 
-        <a  href="https://google.com">Click Here to go to Google</a>
-                   
-        <a  href="picture.jpg">Click Here to see me</a>
+
+
+        <section id="Team" class="section">
+            <div id="team-details" style="padding-left: 7%">
+                <div id="team-details-title" style="margin-top: 10%;">Meet The Team</div>
+                <br>
+                <div id="team-list" style="display: flex; flex-direction: row; flex-flow: wrap ;align-items: center; justify-content: space-between">
+                    <div class="team-member" style="display: flex; flex-direction: row; align-items: center">
+                        <img class="team-member-picture" style="width: 40%" src="images/Group 152.png">
+                        <div class="team-member-details" style="display: flex; flex-direction: column">
+                            <p class="team-member-name">Omar Shamiyeh</p>
+                            <hr width="30%" size="8" color="black" style="margin: 3% 0">
+                            <p class="team-member-role">Founder</p>
+                        </div>
+                    </div>
         
-        <div id="div1">
-            <ol>
-                <!-- id is used to be able to style a single unique element -->
-    
-                <li id="age">I am 19 years old</li>
-                <li class="baz">I study Computer Science</li>
-                <li class="baz">I live in Islamabad</li>
-    
-                <!-- class is used to style elements that are not unique
-                to be able to style several elements the same way -->
-            </ol>
-        </div>
+                    <div class="team-member" style="display: flex; flex-direction: row; align-items: center">
+                        <img class="team-member-picture" style="width: 40%" src="images/Group 153.png">
+                        <div class="team-member-details" style="display: flex; flex-direction: column">
+                            <p class="team-member-name">Khalid Al Boanin</p>
+                            <hr width="30%" size="8" color="black" style="margin: 3% 0">
+                            <p class="team-member-role">Partner</p>
+                        </div>
+                    </div>
         
-        <div>
-            <form>
-                <input style="color: black; font-family: Consolas,Arial;" type="text" placeholder="Enter your question" name="question">
-                <input style="color: black; font-family: Consolas,Arial;" type="submit" >
+                    <div class="team-member" style="display: flex; flex-direction: row; align-items: center">
+                        <img class="team-member-picture" style="width: 40%" src="images/Group 154.png">
+                        <div class="team-member-details" style="display: flex; flex-direction: column">
+                            <p class="team-member-name">Nawfal Rihani</p>
+                            <hr width="30%" size="8" color="black" style="margin: 3% 0">
+                            <p class="team-member-role">Art Director</p>
+                        </div>
+                    </div>
+        
+                    <div class="team-member" style="display: flex; flex-direction: row; align-items: center">
+                        <img class="team-member-picture" style="width: 40%" src="images/Group 155.png">
+                        <div class="team-member-details" style="display: flex; flex-direction: column">
+                            <p class="team-member-name">Hasan Shamiyeh</p>
+                            <hr width="30%" size="8" color="black" style="margin: 3% 0">
+                            <p class="team-member-role">Technical Project Lead</p>
+                        </div>
+                    </div>
+        
+                    <div class="team-member" style="display: flex; flex-direction: row; align-items: center">
+                        <img class="team-member-picture" style="width: 40%" src="images/Group 156.png">
+                        <div class="team-member-details" style="display: flex; flex-direction: column">
+                            <p class="team-member-name">Houssam Abdulrazak</p>
+                            <hr width="30%" size="8" color="black" style="margin: 3% 0">
+                            <p class="team-member-role">Quality Control Specialist</p>
+                        </div>
+                    </div>
+        
+                    <div class="team-member" style="display: flex; flex-direction: row; align-items: center">
+                        <img class="team-member-picture" style="width: 40%" src="images/Group 157.png">
+                        <div class="team-member-details" style="display: flex; flex-direction: column">
+                            <p class="team-member-name">Ahmad Ghaith</p>
+                            <hr width="30%" size="8" color="black" style="margin: 3% 0">
+                            <p class="team-member-role">Full Stack Developer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ContactUs" class="section">
+        <div id="get-in-touch-form">
+            <h1>Get in Touch</h1>
+            <br>
+            <form onsubmit="">
+                <input type="text" id="name" placeholder="Name">
+                <input type="text" id="email" placeholder="Email">
+                <input type="text" id="phone" placeholder="Phone number">
+                <input type="text" id="message" placeholder="Message">
+                <button id="submit" type="submit">Submit</button>
             </form>
         </div>
+        </section>
 
-        <div id="wee">
-            <input name="country" list="countrie" placeholder="Country" style="color: black; font-family: Consolas,Arial;">
-            <datalist id="countrie">
-                <option value="Pakistan"></option>
-                <option value="Qatar"></option>
-            </datalist>
-        </div>
-        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="script.js"></script>
 
     </body>
 </html>

@@ -1,0 +1,470 @@
+@font-face {
+    font-family: 'Alwakalat-Font-ExtraBold';
+    src: url('fonts/Montserrat-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Alwakalat-Font-Bold';
+    src: url('fonts/Montserrat-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Alwakalat-Font-Medium';
+    src: url('fonts/Montserrat-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Alwakalat-Font-Mediumm';
+    src: url('fonts/Montserrat-Medium.ttf') format('truetype');
+}
+
+body{
+    font-family: Alwakalat-Font-Bold, serif;
+    background: black url('images/Rectangle 58.png') no-repeat 0% 0%;
+    background-size: cover;
+    overflow-x: hidden;
+    overflow-y: visible;
+    margin: 0;
+    height: 100vh;
+}
+
+/* Nav Bar */
+#logo{
+    width: 7%;
+    cursor: pointer;
+}
+
+.nav-links{
+    list-style: none;
+}
+
+.nav-links li{
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.nav-links li p:hover{
+    color: #AE3236;
+}
+
+.nav-links p{
+    cursor: pointer;
+    color: #fff;
+    mix-blend-mode: difference;
+    /* filter: invert(1); */
+}
+
+li, a, button{
+    font-weight: bold;
+    font-size: 2vh;
+    text-decoration: none;
+    color: white;
+    mix-blend-mode: difference;
+}
+
+/* Sections */
+/* .section {
+    min-height: 100vh;
+    width: 100vw;
+} */
+
+.section {
+    position: relative;
+    height: 100vh; /* Set height to the full viewport height */
+    width: 100%;  /* Ensure full width */
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* overflow: hidden; Hide any content that overflows */
+}
+
+
+/* Home Section */
+#Home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    /* overflow-y: clip; */
+}
+
+button{
+    padding: 9px 25px;
+    background-color: rgba(79, 79, 79, 0.84);
+    border: none;
+    border-radius: 1vh;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover{
+    background-color: rgba(234, 60, 60, 0.2);
+}
+
+
+header{
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 6%;
+}
+
+#Home h1, h3{
+    position: absolute;
+    text-align: center;
+    color: white;
+    margin-top: 0;
+}
+
+#Home h1{
+    top: 18%;
+    font-family: Alwakalat-Font-ExtraBold, serif;
+    font-size: 4.5vh;
+    font-weight: bolder;
+    margin-bottom: 1%;
+}
+
+#Home h3{
+    top: 25%;
+    font-family: Alwakalat-Font-Medium, serif;
+    font-size: 3vh;
+}
+
+#Home #buttons{
+    position: absolute;
+    top: 33%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* margin: auto; */
+    width: 35%
+}
+
+#buttons button{
+    width: fit-content;
+}
+
+#images{
+    position: absolute;
+    top: 75%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 30%;
+    /*height: 50%;*/
+    /* transform: translateY(-120%); */
+    /*box-sizing: border-box;*/
+}
+
+#center{
+    position: absolute;
+    width: 80%;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1)0.5s;
+    /*transform: translateY(1%);*/
+    z-index: -1;
+}
+
+#first-right, #first-left{
+    position: absolute;
+    width: 65%;
+    z-index: -2;
+}
+
+#first-right{
+    transform: translateX(80%);
+}
+
+#first-left{
+    transform: translateX(-80%);
+}
+
+#second-right, #second-left{
+    position: absolute;
+    width: 50%;
+    z-index: -3;
+}
+
+#second-right{
+    transform: translateX(190%);
+}
+
+#second-left{
+    transform: translateX(-190%);
+}
+
+/* Download Section */
+
+/* #DownloadApp{
+    background: black url('images/Rectangle 58.png') no-repeat 0% 0%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+} */
+
+#DownloadApp {
+    background: black url('images/Rectangle 58.png') no-repeat 0% 0%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    position: relative; /* Set position to relative */
+}
+
+/* #red-box{
+    position: absolute;
+    bottom: 0;
+    width: 100%; 
+    height: 10%; 
+    background-color: #C72316; 
+    z-index: -2;
+}*/
+
+#red-box {
+    position: absolute;
+    bottom: 0; /* Set bottom to 0 to ensure it's at the bottom of DownloadApp */
+    width: 100%;
+    height: 10%;
+    background-color: #C72316;
+    z-index: 1;
+}
+
+/*#download-details{
+    top: 170%;
+    left: 45%;
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 40%;
+    z-index: -1;
+} */
+
+#download-details {
+    /* Adjust the top value as needed, using a percentage or another relative unit */
+    /* top: 50%; 
+    left: 45%; */
+    top: 100%;
+    left: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 40%;
+    z-index: 2;
+}
+
+#download-details h1, #download-details h3, #download-details #buttons {
+    position: static;
+    text-align: left;
+}
+
+#DownloadApp h1{
+    font-family: Alwakalat-Font-ExtraBold, serif;
+    font-size: 4.5vh;
+}
+
+#DownloadApp h3{
+    font-family: Alwakalat-Font-Medium, serif;
+    font-size: 3vh;
+}
+
+#DownloadApp h1, #DownloadApp h3{
+    /* position: relative; */
+    color: white;
+    margin-top: 0;
+}
+
+/* Project Section */
+#Project, #Partners {
+    background: black url('images/Rectangle 58.png') no-repeat 0% 0%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    position: relative; /* Set position to relative */
+    color: white;
+}
+
+#Project h1{
+    margin-top: 10%;
+    margin-left: 5%;
+}
+
+#Partners h1{
+    margin-top: 10%;
+    margin-left: 5%;
+}
+
+/* Partners Section */
+
+
+/* Alwakalat Card Section */
+#AlwakalatCard{
+    background: transparent url('images/Image 1.png') no-repeat padding-box;
+    background-size: cover;
+    /*box-shadow: inset 0 4em 30em 8em black;*/
+}
+
+#alwakalat-card-details {
+    /* Adjust the top value as needed, using a percentage or another relative unit */
+    top: 60%; 
+    left: -50%;
+    opacity: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 40%;
+    z-index: 2;
+}
+
+#alwakalat-card-details h1{
+    font-family: Alwakalat-Font-ExtraBold, serif;
+    position: static;
+    color: white;
+    margin-top: 0;
+    text-align: left;
+    font-size: 4.5vh;
+}
+
+#alwakalat-card-details h3{
+    font-family: Alwakalat-Font-Medium, serif;
+    position: static;
+    color: white;
+    margin-top: 0;
+    text-align: left;
+    font-size: 3vh;
+    width: 60%;
+}
+
+/* Team Section */
+#Team{
+    background-color: white;
+    background-image: none;
+}
+
+li a{
+    color: black;
+}
+
+.team-member{
+    width: 30%;
+    margin: 0.5% 0;
+}
+
+#team-details-title{
+    font-size: 4vh;
+    font-family: Alwakalat-Font-ExtraBold, serif;
+    font-weight: bold;
+}
+
+.team-member-details{
+    text-align: left;
+    width: 50%;
+    /*align-items: flex-start;*/
+}
+
+.team-member-picture{
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+
+.team-member-name{
+    font-size: 4.5vh;
+    font-family: Alwakalat-Font-ExtraBold, serif;
+    margin: 0;
+}
+
+.team-member-role{
+    font-family: Alwakalat-Font-Mediumm, serif;
+    /*width: fit-content;*/
+    font-size: 2vh;
+    margin: 0;
+}
+
+/* Contact Us Section */
+#ContactUs{
+    background: black url('images/Rectangle 58.png') no-repeat 0% 0%;
+    background-size: cover;
+    /* overflow-y: scroll; */
+
+}
+
+#get-in-touch-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    margin: auto;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+input{
+    width: 80%;
+    font-family: Alwakalat-Font-Bold, serif;
+    background-color: rgba(79, 79, 79, 0.84);
+    border: none;
+    padding: 18px 15px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+}
+
+#submit{
+    width: 80%;
+    background-color: white;
+    color: black;
+    margin: 0;
+    padding: 18px 15px;
+}
+
+input::placeholder{
+    color: white;
+}
+
+input::-ms-value{
+    color: white;
+}
+
+#ContactUs h1{
+    font-size: 7vh;
+    font-family: Alwakalat-Font-ExtraBold, serif;
+    color: white;
+}
+
+
+
+@media screen and (max-width: 1920px){
+
+    header{
+        padding: 1% 6%;
+    }
+
+    #buttons{
+        margin-bottom: 5%;
+    }
+
+    #images{
+        top: 90%;
+        /* left: 36%; */
+        width: 23%;
+        /* transform: translateY(-15%); */
+    }
+}
+
+
+

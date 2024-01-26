@@ -1,0 +1,97 @@
+@(role: String)
+@* arguments to main: title, stylesheet, javascript, right *@
+@main("Alwakalat Upcoming Appointments",role) {
+    <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/appointment/upcoming_appointments.css")">
+} {
+    <script src="@routes.Assets.versioned("javascripts/dashboard.js")" type="text/javascript"></script>
+} {
+    <div id="right">
+        <div id="right-top">
+            <div id="right-top-stats">
+                <div class="statistic">
+                    <div id="statistic-name">Total Appointments</div>
+                    <div id="statistic-count">50</div>
+                </div>
+                <div class="statistic">
+                    <div id="statistic-name">Upcoming Appointments</div>
+                    <div id="statistic-count">10</div>
+                </div>
+            </div>
+        </div>
+        <div id="right-bottom">
+            <div class="listing">
+                <div class="appointment-details">
+                    <div class="listing-title" onclick="display_appointment_details()">Appointment A</div>
+                    <div class="appointment-info">
+                        <p>Phone: +974-12345678</p>
+                        <p>Date: 02/12/2023</p>
+                        <p>Time: 12:30pm</p>
+                    </div>
+                </div>
+                <div class="listing-buttons">
+                    <button class="listing-button-grey" onclick="display_edit_appointment()">Edit</button>
+                    <button class="listing-button-red">Delete</button>
+                </div>
+            </div>
+            <div class="listing">
+                <div class="appointment-details">
+                    <div class="listing-title" onclick="display_appointment_details()">Appointment B</div>
+                    <div class="appointment-info">
+                        <p>Phone: +974-49810077</p>
+                        <p>Date: 02/12/2023</p>
+                        <p>Time: 3:30pm</p>
+                    </div>
+                </div>
+                <div class="listing-buttons">
+                    <button class="listing-button-grey" onclick="display_edit_appointment()">Edit</button>
+                    <button class="listing-button-red">Delete</button>
+                </div>
+            </div>
+            <div class="listing">
+                <div class="appointment-details">
+                    <div class="listing-title" onclick="display_appointment_details()">Appointment C</div>
+                    <div class="appointment-info">
+                        <p>Phone: +974-55550044</p>
+                        <p>Date: 03/12/2023</p>
+                        <p>Time: 5:00pm</p>
+                    </div>
+                </div>
+                <div class="listing-buttons">
+                    <button class="listing-button-grey" onclick="display_edit_appointment()">Edit</button>
+                    <button class="listing-button-red">Delete</button>
+                </div>
+            </div>
+            <div class="listing">
+                <div class="appointment-details">
+                    <div class="listing-title" onclick="display_appointment_details()">Appointment D</div>
+                    <div class="appointment-info">
+                        <p>Phone: +974-98765432</p>
+                        <p>Date: 04/12/2023</p>
+                        <p>Time: 10:30am</p>
+                    </div>
+                </div>
+                <div class="listing-buttons">
+                    <button class="listing-button-grey" onclick="display_edit_appointment()">Edit</button>
+                    <button class="listing-button-red">Delete</button>
+                </div>
+            </div>
+            <div class="listing">
+                <div class="appointment-details">
+                    <div class="listing-title" onclick="display_appointment_details()">Appointment E</div>
+                    <div class="appointment-info">
+                        <p>Phone: +974-65432100</p>
+                        <p>Date: 04/12/2023</p>
+                        <p>Time: 6:30pm</p>
+                    </div>
+                </div>
+                <div class="listing-buttons">
+                    <button class="listing-button-grey" onclick="display_edit_appointment()">Edit</button>
+                    <button class="listing-button-red">Delete</button>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+}

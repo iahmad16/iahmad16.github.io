@@ -1,0 +1,103 @@
+@import "add_shop.css";
+
+
+.car-field {
+    width: 40%;
+    height: auto;
+    box-sizing: border-box;
+    /*margin: 1% 0;*/
+    margin-bottom: 8%;
+    margin-right: 4%;
+    text-align: center;
+}
+
+label {
+    display: block;
+    font-family: Alwakalat-Font, serif;
+    font-weight: bold;
+    font-size: 1vw;
+}
+
+.car-field input{
+    width: 100%;
+    height: 90%;
+    font-weight: normal;
+    padding: 2% 2%;
+    font-size: 2.5vh;
+    text-align: left;
+}
+
+.car-field{
+    width: 40%;
+}
+
+.car-field label{
+    font-size: 2vh;
+    text-align: left;
+}
+
+#new-car-form{
+    flex-direction: row;
+}
+
+#car-information{
+    width: 60%;
+}
+
+#services-socialmedia{
+    width: 40%;
+}
+
+
+#services-information .form-header, #social-media-information .form-header{
+    width: 100%;
+}
+
+#shop-logo-container{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5%;
+    width: 50%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#shop-logo-container img{
+    width: 50%;
+}
+
+.account-info{
+    width: 100%;
+}
+
+.upload-label{
+    width: fit-content;
+    padding: 3% 2%;
+    /*height: 50%;*/
+}
+
+@media screen and (max-width: 600px){
+    #new-car-form{
+        flex-direction: column;
+    }
+
+    #car-information, #services-socialmedia{
+        width: 100%;
+    }
+
+    #services-information, #social-media-information{
+        height: fit-content;
+    }
+
+    .car-field{
+        width: 45%;
+    }
+
+    .car-field label{
+        font-size: 1.5vh;
+    }
+
+    .car-field input{
+        font-size: 1.5vh;
+    }
+}

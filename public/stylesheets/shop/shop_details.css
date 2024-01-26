@@ -1,0 +1,187 @@
+@import "add_shop.css";
+
+/*#shop-logo-container{*/
+/*    width: fit-content;*/
+/*}*/
+
+#shop-logo-container{
+    width: 8%;
+    margin-right: 3%;
+}
+
+#right-bottom{
+    flex-direction: row;
+}
+
+#right-top{
+    height: fit-content;
+}
+
+#right-top-buttons{
+    justify-content: space-between;
+}
+
+#right-top-title{
+    width: 100%;
+}
+
+#right-bottom-left{
+    justify-content: normal;
+    box-shadow: none;
+}
+
+#services-information{
+    /*height: fit-content;*/
+}
+
+#accounts-list a{
+    background-color: lightgray;
+}
+
+#accounts-list, #services-list{
+    flex-direction: row;
+    flex-flow: wrap;
+    /*justify-content: space-between;*/
+}
+
+#service-discount{
+    background-color: rgba(114, 170, 215, 0.66);
+}
+
+#accounts-list a, #service-discount{
+    width: 30%;
+    height: auto;
+    border-style: none;
+    border-radius: 1vh;
+    text-align: center;
+    margin: 0.5% 1% 1% 0.5%;
+    font-family: Alwakalat-Font, serif;
+    font-weight: bold;
+    padding: 2% 0 2% 0;
+    font-size: 1vw;
+}
+
+#social-media-information{
+    height: 40%;
+}
+
+#shop-information{
+    margin-bottom: 3%;
+    height: fit-content;
+}
+
+#shop-information p,a{
+    font-size: 2vh;
+    color: black;
+}
+
+.shop-icons{
+    width: 4%;
+    height: fit-content;
+    margin-right: 5%;
+}
+
+.shop-info{
+    height: fit-content;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@media screen and (max-width: 1024px){
+
+
+    #accounts-list a, #service-discount{
+        width: 80%;
+        height: auto;
+        /*border-style: none;*/
+        /*border-radius: 1vh;*/
+        /*text-align: center;*/
+        /*margin: 0.5% 1% 1% 0.5%;*/
+        /*font-family: Alwakalat-Font, serif;*/
+        /*font-weight: bold;*/
+        padding: 3% 0 3% 0;
+        font-size: 1.5vh;
+    }
+
+    #shop-information{
+        margin-bottom: 3%;
+        height: fit-content;
+        width: 100%;
+    }
+
+    #shop-information p,a{
+        font-size: 2vh;
+        color: black;
+    }
+
+    #accounts-list, #services-list{
+        flex-direction: column;
+        height: fit-content;
+        align-items: center;
+    }
+
+    /*.form-title{*/
+    /*    text-align: center;*/
+    /*}*/
+
+    #right-bottom-left, #right-bottom-right{
+        /*width: 100%;*/
+        padding: 0;
+        height: fit-content;
+    }
+
+    #right-bottom-left{
+        width: 70%;
+    }
+
+    #right-bottom-right{
+        width: 30%;
+    }
+
+    #services-information, #social-media-information{
+        height: fit-content;
+    }
+
+    #services-information .form-title ,#social-media-information .form-title{
+        text-align: center;
+    }
+
+    #services-information{
+        margin-bottom: 20%;
+    }
+
+
+    @media screen and (max-width: 600px){
+
+        .button-top-grey, .button-top-red{
+            width: fit-content;
+            height: fit-content;
+            padding: 10% 4%;
+            font-size: 2vh;
+        }
+
+        #right-bottom{
+            flex-direction: column;
+        }
+
+        #right-bottom-left, #right-bottom-right{
+            width: 100%;
+            padding: 0;
+            height: fit-content;
+        }
+
+        #services-information{
+            margin-bottom: 5%;
+        }
+
+        .shop-info{
+            height: 20%;
+        }
+
+        #shop-information{
+            margin-bottom: 0;
+        }
+    }
+}

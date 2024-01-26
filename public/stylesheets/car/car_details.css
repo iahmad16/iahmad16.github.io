@@ -1,0 +1,187 @@
+@import "add_car.css";
+
+#information-container{
+    display: flex;
+    flex-direction: column;
+
+    width: 50%;
+}
+
+#right-bottom{
+    box-shadow: 10px 10px 10px -10px rgba(0, 0, 0, 0.75);
+}
+
+#right-top{
+    height: fit-content;
+}
+
+#right-top-buttons{
+    width: 25%;
+}
+
+.button-top-red, .button-top-grey{
+    width: 48%;
+}
+
+input{
+    width: 30%;
+    margin: 0.5% 1% 1% 0.5%;
+    padding: 1% 0 1% 0;
+    font-size: 2vh;
+}
+
+#seller-details{
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    font-size: 2vh;
+    font-weight: bold;
+    width: 120%;
+    margin-top: 2%;
+}
+
+.seller-detail{
+    width: fit-content;
+    font-size: 2vh;
+    background-color: rgba(215, 114, 114, 0.66);
+    border-radius: 1vh;
+    padding: 1% 1.5%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+}
+
+#right-top-title{
+    width: 100%;
+}
+
+.form-title{
+    padding: 0;
+}
+
+.car-image{
+    width: 30%;
+    height: auto;
+}
+
+#car-images{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#images-scrollbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow-x: scroll;
+}
+
+#car-information{
+    /*height: fit-content;*/
+    box-sizing: border-box;
+}
+
+.car-field {
+    width: 18%;
+    height: auto;
+    box-sizing: border-box;
+    /*margin: 1% 0;*/
+    margin-bottom: 3%;
+    margin-right: 2%;
+    text-align: center;
+}
+
+label {
+    display: block;
+    font-family: Alwakalat-Font, serif;
+    font-weight: bold;
+    font-size: 1vw;
+}
+
+input {
+    width: 100%;
+    height: 90%;
+    text-align: center;
+    font-weight: normal;
+    padding: 2% 0;
+    font-size: 1vw;
+}
+
+@media screen and (max-width: 1024px){
+
+    .car-field{
+        width: 30%;
+        margin-bottom: 8%;
+        border-radius: 0.5vh;
+    }
+
+    .car-field label{
+        font-size: 1.5vh;
+    }
+
+    input{
+        width: 100%;
+        margin: 1% 2.5% 2% 0;
+        padding: 2% 0 2% 0;
+        font-size: 1.5vh;
+    }
+}
+
+@media screen and (max-width: 600px){
+
+    .seller-detail{
+        font-size: 1.5vh;
+    }
+
+    #right-top-buttons{
+        width: 35%;
+    }
+
+    .car-field{
+        width: 30%;
+        margin-bottom: 8%;
+    }
+
+    .car-field label{
+        font-size: 1.5vh;
+    }
+
+
+    #right-top-title{
+        font-size: 2.5vh;
+    }
+
+    /*#appointment-details{*/
+    /*    display: flex;*/
+    /*    flex-direction: row;*/
+    /*    flex-flow: wrap;*/
+    /*    font-weight: bold;*/
+    /*    width: 120%;*/
+    /*    margin-top: 2%;*/
+    /*}*/
+
+    /*.appointment-detail{*/
+    /*    font-size: 1.5vh;*/
+    /*    background-color: rgba(215, 114, 114, 0.66);*/
+    /*    border-radius: 1vh;*/
+    /*    padding: 1% 3%;*/
+    /*    margin-right: 2%;*/
+    /*    margin-bottom: 2%;*/
+    /*}*/
+
+    #car-images{
+        margin-bottom: 10%;
+    }
+
+    .car-image{
+        width: 60%;
+        height: auto;
+    }
+
+    input{
+        width: 100%;
+        margin: 1% 2.5% 2% 0;
+        padding: 2% 0 2% 0;
+        font-size: 1.5vh;
+    }
+}

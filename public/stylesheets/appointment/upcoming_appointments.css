@@ -1,0 +1,69 @@
+@import "../car/car_listings.css";
+
+.listing{
+    height: 20%;
+}
+
+.button-top-red{
+    width: 65%;
+}
+
+.appointment-details{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.appointment-info{
+    font-family: Alwakalat-Font, serif;
+    font-weight: bold;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /*justify-content: space-between;*/
+}
+
+.appointment-info p{
+    margin-right: 3%;
+    font-size: 1.7vh;
+}
+
+
+
+@media screen and (max-width: 600px){
+    .listing-title{
+        width: 70%;
+        font-size: 2.5vh;
+    }
+
+    .listing-button-grey, .listing-button-red{
+        padding: 6% 8%;
+    }
+
+    #right-top{
+        width: 100%;
+    }
+
+    #statistic-name{
+        width: 75%;
+    }
+
+    .appointment-info{
+        width: 120%;
+    }
+
+    .appointment-info p{
+        font-size: 1vh;
+    }
+
+    .appointment-details{
+        width: 90%;
+    }
+
+    .button-top-red{
+        width: fit-content;
+    }
+}

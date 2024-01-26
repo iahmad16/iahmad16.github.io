@@ -1,0 +1,28 @@
+@import "../shop/shop_details.css";
+
+/*#right-top-buttons{*/
+/*    width: 50%;*/
+/*}*/
+
+/*.button-top-red, .button-top-grey{*/
+/*    width: 48%;*/
+/*}*/
+
+.shop-icons{
+    width: 2.5%;
+    margin-right: 3%
+}
+
+@media screen and (max-width: 600px){
+    #right-top-buttons{
+        width: 60%;
+    }
+
+    .button-top-grey, .button-top-red{
+        width: fit-content;
+        height: fit-content;
+        padding: 10% 6%;
+        font-size: 2vh;
+    }
+}
+

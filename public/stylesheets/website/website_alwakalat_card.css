@@ -1,0 +1,98 @@
+#AlwakalatCard{
+    background: transparent url('../../images/images/Image 1.png') no-repeat padding-box;
+    background-size: cover;
+    /*box-shadow: inset 0 4em 30em 8em black;*/
+}
+
+#alwakalat-card-details {
+    top: 60%;
+    left: -50%;
+    opacity: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 50%;
+    z-index: 2;
+}
+
+#alwakalat-card-details h1{
+    font-family: Alwakalat-Font-ExtraBold, serif;
+    position: static;
+    color: white;
+    margin-top: 0;
+    text-align: left;
+    font-size: 4.5vh;
+}
+
+#alwakalat-card-details h3{
+    font-family: Alwakalat-Font-Medium, serif;
+    position: static;
+    color: white;
+    margin-top: 0;
+    text-align: left;
+    font-size: 3vh;
+    width: 60%;
+}
+
+#alwakalat-card-details button{
+    padding: 3% 2%;
+    width: fit-content;
+    background-color: white;
+    color: black;
+    margin-right: 2%;
+}
+
+#AlwakalatCard .buttons{
+    width: 90%;
+}
+
+@media screen and (max-width: 600px){
+    #AlwakalatCard{
+        background: transparent url('../../images/images/Image1-portrait.jpeg') no-repeat padding-box 0% 0%;
+        background-size: cover;
+        background-position-x: 90%;
+        align-content: center;
+        /*box-shadow: inset 0 4em 30em 8em black;*/
+    }
+
+    #alwakalat-card-details {
+        top: 60%;
+        left: -50%;
+        opacity: 0;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        z-index: 2;
+    }
+
+    #alwakalat-card-details h1{
+        margin-top: 0;
+        text-align: center;
+        font-size: 3vh;
+    }
+
+    #alwakalat-card-details h3{
+        margin-top: 0;
+        text-align: center;
+        font-size: 2vh;
+        width: 85%;
+    }
+
+    #AlwakalatCard .buttons{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        /* margin: auto; */
+        width: 90%
+    }
+
+    #AlwakalatCard button{
+        background-color: white;
+        color: black;
+    }
+}

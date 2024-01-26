@@ -1,0 +1,77 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+
+#Website
+GET     /                                 controllers.WebsiteController.getWebsiteHomeView
+
+#Car Models
+GET     /admin/car-models                 controllers.CarModelController.getCarModelListingsView(request: Request)
+GET     /admin/view-car-model/:make       controllers.CarModelController.getCarModelDetailsView(make: String, request: Request)
+GET     /admin/add-car-model              controllers.CarModelController.getAddCarModelView(request: Request)
+POST    /admin/add-car-model              controllers.CarModelController.postAddCarModel(request: Request)
+GET     /admin/edit-make-logo/:make       controllers.CarModelController.getEditCarMakeLogoView(make: String, request: Request)
+POST    /admin/edit-make-logo             controllers.CarModelController.postEditCarMakeLogo(request: Request)
+GET     /admin/add-class/:make            controllers.CarModelController.getAddClassView(make: String, request: Request)
+POST    /admin/add-class                  controllers.CarModelController.postAddClass(request: Request)
+GET     /admin/delete-class/:make         controllers.CarModelController.getDeleteClassView(make: String, request: Request)
+POST    /admin/delete-class               controllers.CarModelController.postDeleteClass(request: Request)
+
+#Admin
+GET     /admin/add-admin                  controllers.SuperAdminController.getCreateAdminView(request: Request)
+POST    /admin//add-admin                 controllers.SuperAdminController.postCreateAdminView(request: Request)
+GET     /admin/view-admin/:uid            controllers.SuperAdminController.getAdminDetailsView(uid: String, request: Request)
+GET     /admin/edit-admin/:uid            controllers.SuperAdminController.getEditAdminDetailsView(uid: String,request: Request)
+POST    /admin/edit-admin                 controllers.SuperAdminController.postEditAdminDetails(request: Request)
+GET     /admin/admin-listings             controllers.SuperAdminController.getAdminListingsView(request: Request)
+POST    /admin/deactivate-admin           controllers.SuperAdminController.postDeactivateAdmin(request: Request)
+
+#Customer
+GET     /admin/view-customer/:uid         controllers.SuperAdminController.getCustomerDetailsView(uid: String, request: Request)
+GET     /admin/customer-listings          controllers.SuperAdminController.getCustomerListingsView(request: Request)
+
+#Login
+GET     /admin/login                      controllers.LoginController.getLoginView(request: Request)
+POST    /admin/login                      controllers.LoginController.postLogin(request: Request)
+GET     /admin/forgot-password            controllers.LoginController.getForgotPasswordView(request: Request)
+POST    /admin/forgot-password            controllers.LoginController.postForgotPassword(request: Request)
+
+#Dashboard
+GET     /admin/dashboard                  controllers.HomeController.getHomeView(request: Request)
+
+#Car
+GET     /admin/car-listings               controllers.CarController.getCarListingsView(request: Request)
+GET     /admin/add-car                    controllers.CarController.getAddCarView(request: Request)
+POST    /admin/add-car                    controllers.CarController.postAddCarView(request: Request)
+GET     /admin/view-car/:listingID        controllers.CarController.getCarDetailsView(listingID: String, request: Request)
+GET     /admin/update-price/:listingID    controllers.CarController.getUpdateListingPriceView(listingID: String, request: Request)
+POST    /admin/update-price               controllers.CarController.postUpdateListingPriceView(request: Request)
+
+#Shop
+GET     /admin/shop-listings              controllers.ShopController.getShopListingsView(request: Request)
+GET     /admin/add-shop                   controllers.ShopController.getAddShopView(request: Request)
+POST    /admin/add-shop                   controllers.ShopController.postAddShopView(request: Request)
+GET     /admin/view-shop/:uid             controllers.ShopController.getShopDetailsView(uid: String, request: Request)
+GET     /admin/edit-shop/:uid             controllers.ShopController.getEditShopDetailsView(uid: String, request: Request)
+POST    /admin/edit-shop                  controllers.ShopController.postEditShopDetails(request: Request)
+POST    /admin/delete-shop                controllers.ShopController.postDeleteShop(request: Request)
+
+#Appointment
+GET     /admin/upcoming-appointments      controllers.AppointmentController.getUpcomingAppointmentsView(request: Request)
+GET     /admin/view-appointment           controllers.AppointmentController.getAppointmentDetailsView(request: Request)
+GET     /admin/add-appointment            controllers.AppointmentController.getAddAppointmentView(request: Request)
+GET     /admin/edit-appointment           controllers.AppointmentController.getEditAppointmentDetailsView(request: Request)
+
+#Change Password
+GET     /admin/change-password            controllers.HomeController.getChangePasswordView(request: Request)
+POST    /admin/change-password            controllers.HomeController.postChangePasswordView(request: Request)
+
+#Purchase Car (Demo)
+GET     /admin/purchase-listing                      controllers.CarController.purchaseCarListing(request: Request)
+GET     /admin/set-under-processing/:listingID       controllers.CarController.setUnderProcessing(listingID: String, request: Request)
+
+POST    /admin/set-as-sold                controllers.CarController.setCarAsSold(request: Request)
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

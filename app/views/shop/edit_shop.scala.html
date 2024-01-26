@@ -1,0 +1,94 @@
+@import models.classes.Shop
+@(shop: Shop, csrfToken: play.filters.csrf.CSRF.Token, role: String)
+
+@*arguments to main: title, stylesheet, javascript, right *@
+@main("Edit Shop",role) {
+    <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/shop/edit_shop.css")">
+} {
+    <script src="@routes.Assets.versioned("javascripts/dashboard.js")" type="text/javascript"></script>
+} {
+    <div id="right">
+        <div id="right-top">
+            <div id="right-top-title">Edit Shop</div>
+            <div id="right-top-buttons">
+                <button class="button-top-grey" onclick="display_shop_listings()">Cancel</button>
+                <button class="button-top-red" form="new-car-form" onclick="update_shop(); return false;">Save</button>
+            </div>
+        </div>
+        <div id="right-bottom">
+            <form id="new-car-form">
+                <div id="car-information">
+                    <div id="shop-logo-container">
+                        <img id="shop-logo-image" src="@shop.logo" alt="@shop.name's Logo">
+                        <label for="shop-logo" class="upload-label">
+                            Update Logo
+                            <input type="file" id="shop-logo" class="visually-hidden" onchange="updateLogoPreview()" />
+                        </label>
+                    </div>
+
+                    <div id="car-information-fields">
+                        <input type="hidden" id="csrfToken" value="@csrfToken.value">
+                        <input  id="shop-uid" type="text" value="@shop.uid" readonly hidden="hidden">
+
+                        <div class="car-field">
+                            <label for="shop-name">Name</label>
+                            <input  id="shop-name" type="text" value="@shop.name" placeholder="Name">
+                        </div>
+                        <div class="car-field">
+                            <label for="shop-email">Email</label>
+                            <input id="shop-email" type="text" value="@shop.emailAddress" placeholder="Email">
+                        </div>
+                        <div class="car-field">
+                            <label for="shop-phone">Phone Number</label>
+                            <input id="shop-phone" type="text" value="@shop.phoneNumber" placeholder="Phone">
+                        </div>
+                        <div class="car-field">
+                            <label for="shop-address">Address</label>
+                            <input id="shop-address" type="text" value="@shop.address" placeholder="Address">
+                        </div>
+                        <div class="car-field">
+                            <label for="car-make">Location Latitude</label>
+                            <input id="shop-latitude" type="text" value="@shop.location.latitude" placeholder="Latitude">
+                        </div>
+                        <div class="car-field">
+                            <label for="shop-longitude">Location Longitude</label>
+                            <input id="shop-longitude" type="text" value="@shop.location.longitude" placeholder="Longitude">
+                        </div>
+                    </div>
+                </div>
+                <div id="services-socialmedia">
+                    <div id="services-information">
+                        <div class="form-header">
+                            <div class="form-title">Discounted Services</div>
+                            <button class="listing-button-red" onclick="addServiceFields()" type="button">Add Service</button>
+                        </div>
+                        <div id="services-list">
+                            @for(service <- shop.discountedServices){
+                                <div class="account-info">
+                                    <input id="service-name" type="text" value="@service.serviceName">
+                                    <input id="service-discount" type="number" value="@service.discountPercent">
+                                    <img src="/assets/images/remove.png" class="delete_button">
+                                </div>
+                            }
+                        </div>
+                    </div>
+                    <div id="social-media-information">
+                        <div class="form-header">
+                            <div class="form-title">Social Media</div>
+                            <button class="listing-button-red" onclick="addAccountFields()" type="button">Add Account</button>
+                        </div>
+                        <div id="accounts-list">
+                            @for(account <- shop.socialMediaAccounts){
+                                <div class="account-info">
+                                    <input id="selected-option" type="text" value="@account.platformToString()">
+                                    <input id="account-link" type="text" value="@account.accountLink">
+                                    <img src="/assets/images/remove.png" class="delete_button">
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+}

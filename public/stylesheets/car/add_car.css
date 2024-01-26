@@ -1,0 +1,229 @@
+/* Import existing CSS from Dashboard */
+@import "car_listings.css";
+/*@import "website_home.css";*/
+
+#right{
+    padding-bottom: 1%;
+}
+
+form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#right-top {
+    height: fit-content;
+}
+
+#right-top-buttons{
+    width: 40%;
+    justify-content: space-between;
+}
+
+#right-top-title{
+    font-size: 1.7vw;
+    width: 100%;
+}
+
+#right-bottom {
+    width: 100%;
+    height: 90%;
+    margin-top: 0.8vw;
+    border-radius: 2vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 3%;
+    box-shadow: 10px 10px 10px -10px rgba(0, 0, 0, 0.75);
+}
+
+#car-information {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    object-fit: contain;
+    flex-direction: column;
+    margin-bottom: 1%;
+}
+
+#car-information-fields {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: stretch;
+}
+
+select, input, .upload-label {
+    width: 30%;
+    height: auto;
+    background-color: lightgray;
+    border-style: none;
+    border-radius: 1vh;
+    text-align: center;
+    margin: 0.5% 1.5% 1% 0;
+    font-family: Alwakalat-Font, serif;
+    font-weight: normal;
+    padding: 2% 0 2% 0;
+    font-size: 1vw;
+    cursor: pointer;
+}
+
+select:hover, input:hover, .upload-label :hover{
+    background-color: #ccc;
+}
+
+.upload-label {
+    display: inline-block;
+    position: relative;
+}
+
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+#seller-information {
+    width: 100%;
+    height: fit-content;
+}
+
+#car-photos {
+    width: 100%;
+    height: 20%;
+}
+
+.form-title {
+    font-family: Alwakalat-Font, serif;
+    font-weight: bold;
+    font-size: 1.4vw;
+}
+
+@media screen and (max-width: 1024px){
+    #right{
+        display: flex;
+        width: 100%;
+        padding-right: 1%;
+        padding-left: 1%;
+    }
+
+    #right-top{
+        display: flex;
+        height: 10vh;
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+    }
+
+    #right-top-title{
+        width: 50%;
+        height: fit-content;
+        text-align: left;
+        font-size: 3vw;
+    }
+
+    .button-top-grey, .button-top-red{
+        width: 45%;
+        font-size: 2vh;
+    }
+
+    /*.button-top-grey, .button-top-red{*/
+    /*    width: fit-content;*/
+    /*    height: fit-content;*/
+    /*    padding: 8% 6%;*/
+    /*    font-size: 2vh;*/
+    /*}*/
+
+    #right-top-buttons{
+        width: 40%;
+        justify-content: space-between;
+    }
+
+    #right-bottom{
+        height: 90vh;
+    }
+
+    .form-title{
+        font-size: 2vw;
+        margin-bottom: 3%;
+    }
+
+    /* Hide scroll bar */
+    #right-bottom::-webkit-scrollbar {
+        display: none;
+    }
+
+    select,input,.upload-label{
+        width: 30%;
+        font-size: 2vw;
+        margin: 0 2% 2% 0;
+        padding: 2% 0 2% 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    #right-top{
+        padding: 3%;
+        align-items: center;
+    }
+
+    #right-top-title{
+        font-size: 5vw;
+    }
+
+
+    #right-top-buttons{
+        width: 40%;
+    }
+
+    .button-top-grey, .button-top-red{
+        width: fit-content;
+        height: fit-content;
+        padding: 8% 6%;
+        font-size: 2vh;
+    }
+
+
+    form{
+        justify-content: space-between;
+    }
+
+    select,input,.upload-label{
+        width: 30%;
+        margin: 0 3% 3% 0;
+        padding: 4% 0 4% 0;
+        font-size: 2.5vw;
+        -webkit-appearance: none;
+        color: black;
+        text-align-last: center;
+    }
+
+    .form-title{
+        font-size: 4vw;
+        margin-bottom: 3%;
+    }
+
+    #car-information{
+        height: fit-content;
+    }
+
+    #seller-information{
+        height: fit-content;
+    }
+
+    #car-photos{
+        height: 10%;
+    }
+
+}

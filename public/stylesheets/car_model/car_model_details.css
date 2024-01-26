@@ -1,0 +1,24 @@
+@import "add_car_model.css";
+
+#right-top-buttons{
+    width: 100%;
+}
+
+.button-top-grey, .button-top-red{
+    width: 30%;
+    font-size: 2.2vh;
+}
+
+@media screen and (max-width: 600px){
+    #right-top-buttons{
+        width: 100%;
+    }
+
+    .button-top-grey, .button-top-red{
+        width: 30%;
+        font-size: 1.5vh;
+        height: 90%;
+        padding: 2% 1%;
+    }
+}
+

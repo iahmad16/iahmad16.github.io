@@ -1,0 +1,22 @@
+@import "../change_password.css";
+
+select{
+    margin-left: 0;
+    width: 51%;
+    padding-left: 1%;
+    text-align: left;
+}
+
+@media screen  and (max-width: 1024px){
+
+}
+
+@media screen  and (max-width: 600px){
+    .form-field{
+        margin-bottom: 7%;
+    }
+
+    select{
+        width: 80%;
+    }
+}

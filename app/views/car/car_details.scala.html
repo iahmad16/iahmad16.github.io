@@ -1,0 +1,129 @@
+@import models.classes.Car
+@import models.enums.CarListingStatus
+@(car: Car, csrfToken: play.filters.csrf.CSRF.Token, role: String)
+@* arguments to main: title, stylesheet, javascript, right *@
+@main("Car Details",role) {
+    <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/car/car_details.css")">
+} {
+    <script src="@routes.Assets.versioned("javascripts/dashboard.js")" type="text/javascript"></script>
+} {
+    <div id="right">
+        <div id="right-top">
+
+            <div id="information-container">
+                <div id="right-top-title">@car.make @car.model @car.modelYear </div>
+                <div id="seller-details">
+                    <div class="seller-detail">Listing ID: @car.listingID</div>
+                    <div class="seller-detail">Listing Status: @car.status</div>
+                    <div class="seller-detail">Seller Name: @car.customer.fullName() </div>
+                    <div class="seller-detail">Seller Phone: @car.customer.phoneNumber</div>
+                </div>
+            </div>
+            <div id="right-top-buttons">
+                @if(!car.status.equals(CarListingStatus.SOLD)){
+                    <button class="button-top-grey" onclick="display_update_price(`@car.listingID`)">Update Price</button>
+                    <button class="listing-button-grey" onclick="set_as_sold(`@car.listingID`, @car.price)">Set as sold</button>
+                }
+            </div>
+        </div>
+        <div id="right-bottom">
+            <input type="hidden" id="csrfToken" value="@csrfToken.value">
+            <div id="car-images">
+                <div class="form-title">Car Images</div>
+                <br>
+                <div id="images-scrollbar">
+                    @for(image <- car.images){
+                        <img class="car-image" src="@image" alt="Car Image">
+                    }
+                </div>
+            </div>
+            <br>
+            <div id="car-information">
+                <div class="form-title">Car Information</div>
+                <br>
+                <div id="car-information-fields">
+                    <div class="car-field">
+                        <label for="car-make">Make</label>
+                        <input id="car-make" type="text" value="@car.make" readonly>
+                    </div>
+                    <div class="car-field">
+                        <label for="car-model">Model</label>
+                        <input id="car-model" type="text" value="@car.model" readonly>
+                    </div>
+                    <div class="car-field">
+                        <label for="car-subclass">Sub Class</label>
+                        <input id="car-subclass" type="text" value="@car.subClass" readonly>
+                    </div>
+                    <div class="car-field">
+                        <label for="car-year">Year</label>
+                        <input id="car-year" type="text" value="@car.modelYear" readonly>
+                    </div>
+                    <div class="car-field">
+                        <label for="car-mileage">Mileage</label>
+                        <input id="car-mileage" type="text" value="@car.mileage" readonly>
+                    </div>
+                    <div class="car-field">
+                        <label for="car-price">Price</label>
+                        <input id="car-price" type="text" value="@car.price" readonly>
+                    </div>
+                    <div class="car-field">
+                        <label for="car-geartype">Gear Type</label>
+                        <input id="car-geartype" type="text" value="@car.gearType" readonly>
+                    </div>
+                    <div class="car-field">
+                        <label for="car-fueltype">Fuel Type</label>
+                        <input id="car-fueltype" type="text" value="@car.fuelType" readonly>
+                    </div>
+                    <div class="car-field">
+                        <label for="car-seattype">Seat Type</label>
+                        <input id="car-seattype" type="text" value="@car.seatType" readonly>
+                    </div>
+                    <div class="car-field">
+                        <label for="car-warranty">Warranty</label>
+                        <input id="car-warranty" type="text" value="@car.underWarranty" readonly>
+                    </div>
+                    <div class="car-field">
+                        <label for="car-warrantyexpiry">Warranty Expiry</label>
+                        <input id="car-warrantyexpiry" type="text" value="@car.warrantyExpiry" readonly>
+                    </div>
+                    <div class="car-field">
+                        <label for="car-extcolor">Exterior Color</label>
+                        <input id="car-extcolor" type="text" value="@car.exteriorColor" readonly>
+                    </div>
+                    <div class="car-field">
+                        <label for="car-intcolor">Interior Color</label>
+                        <input id="car-intcolor" type="text" value="@car.interiorColor" readonly>
+                    </div>
+                    <div class="car-field">
+                        <label for="car-wheeldrive">Wheel Drive</label>
+                        <input id="car-wheeldrive" type="text" value="@car.wheelDrive" readonly>
+                    </div>
+                    <div class="car-field">
+                        <label for="car-sunroof">Sunroof</label>
+                        <input id="car-sunroof" type="text" value="@car.hasSunroof" readonly>
+                    </div>
+                    <div class="car-field">
+                        <label for="car-importcountry">Import Country</label>
+                        <input id="car-importcountry" type="text" value="@car.importCountry" readonly>
+                    </div>
+@*                    <input id="car-make" type="text" value="Make: Honda" readonly>*@
+@*                    <input id="car-model" type="text" value="Model: Civic" readonly>*@
+@*                    <input id="car-subclass" type="text" value="Sub Class: NA" readonly>*@
+@*                    <input id="car-year" type="text" value="Year: 2023" readonly>*@
+@*                    <input id="car-mileage" type="text" value="Mileage: 1000km" readonly>*@
+@*                    <input id="car-price" type="text" value="Price: 50,000 QAR" readonly>*@
+@*                    <input id="car-geartype" type="text" value="Gear Type: Automatic" readonly>*@
+@*                    <input id="car-fueltype" type="text" value="Fuel Type: Petrol" readonly>*@
+@*                    <input id="car-warranty" type="text" value="Warranty: 10 years" readonly>*@
+@*                    <input id="car-warrantyexpiry" type="text" value="Warranty Expiry: 12/04/2033" readonly>*@
+@*                    <input id="car-extcolor" type="text" value="Exterior Color: Silver" readonly>*@
+@*                    <input id="car-intcolor" type="text" value="Interior Color: Grey" readonly>*@
+@*                    <input id="car-seatype" type="text" value="Seat Type: 5" readonly>*@
+@*                    <input id="car-wheeldrive" type="text" value="Wheel Drive: 2" readonly>*@
+@*                    <input id="car-sunroof" type="text" value="Has Sunroof: No" readonly>*@
+@*                    <input id="car-importcountry" type="text" value="Import Country: Oman" readonly>*@
+                </div>
+            </div>
+        </div>
+    </div>
+}

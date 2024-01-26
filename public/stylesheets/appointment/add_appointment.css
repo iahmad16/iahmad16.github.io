@@ -1,0 +1,9 @@
+@import "../car/add_car.css";
+
+#new-car-form{
+    height: 70%;
+}
+
+.form-title{
+    text-align: left;
+}

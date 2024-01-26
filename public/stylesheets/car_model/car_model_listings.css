@@ -1,0 +1,15 @@
+@import "../car/car_listings.css";
+
+.listing-buttons{
+    width: 45%;
+}
+
+@media screen and (max-width: 1024px){
+    .listing-buttons{
+        width: 70%;
+    }
+
+    .listing-button-grey, .listing-button-red{
+        padding: 1% 4%;
+    }
+}

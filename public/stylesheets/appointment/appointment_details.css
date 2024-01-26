@@ -1,0 +1,45 @@
+@import "../car/car_details.css";
+
+#right-top-buttons{
+    width: 25%;
+}
+
+.button-top-grey, .button-top-red{
+    width: 48%;
+}
+
+#appointment-details{
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    font-weight: bold;
+    width: 120%;
+    margin-top: 2%;
+}
+
+.appointment-detail{
+    width: fit-content;
+    font-size: 2vh;
+    background-color: rgba(215, 114, 114, 0.66);
+    border-radius: 1vh;
+    padding: 1% 1.5%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+}
+
+@media screen and (max-width: 600px){
+    .appointment-detail{
+        font-size: 1.5vh;
+    }
+
+    #right-top-buttons{
+        width: 30%;
+    }
+
+    .button-top-grey, .button-top-red{
+        width: fit-content;
+        height: fit-content;
+        padding: 10% 10%;
+        font-size: 2vh;
+    }
+}

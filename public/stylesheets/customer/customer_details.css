@@ -1,0 +1,49 @@
+@import "../shop/shop_details.css";
+
+#customer-information{
+    margin-bottom: 3%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+}
+
+#customer-information-left, #customer-information-right{
+    width: 50%;
+    box-sizing: border-box;
+}
+
+a{
+    font-weight: bold;
+}
+
+a:hover{
+    color: #ae3236
+}
+
+.shop-icons{
+    width: 2.5%;
+    margin-right: 3%
+}
+
+#right-top-buttons{
+    justify-content: right;
+}
+
+@media screen and (max-width: 600px){
+    #customer-information{
+        flex-direction: column;
+    }
+
+    #customer-information-left{
+        width: 100%;
+    }
+
+    ul{
+        padding-left: 10%;
+    }
+
+    li{
+        margin-bottom: 5%;
+    }
+}
+

@@ -1,0 +1,501 @@
+@import "website_download_app.css";
+@import "website_alwakalat_card.css";
+@import "website_team.css";
+@import "website_contact_us.css";
+
+@font-face {
+    font-family: 'Alwakalat-Font-ExtraBold';
+    src: url('../../fonts/static/Montserrat-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Alwakalat-Font-Bold';
+    src: url('../../fonts/static/Montserrat-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Alwakalat-Font-Medium';
+    src: url('../../fonts/static/Montserrat-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Alwakalat-Font-Mediumm';
+    src: url('../../fonts/static/Montserrat-Medium.ttf') format('truetype');
+}
+
+#mobile-bar{
+    display: none;
+}
+
+body{
+    font-family: Alwakalat-Font-Bold, serif;
+    /*background: black url('../images/images/Rectangle 58.png') no-repeat 0% 0%;*/
+    background-color: white;
+    /*background-size: cover;*/
+    overflow-x: clip;
+    box-sizing: border-box;
+    overflow-y: visible;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    scroll-behavior: smooth;
+}
+
+/* NAV BAR */
+#logo{
+    width: 7%;
+    cursor: pointer;
+}
+
+.nav-links{
+    list-style: none;
+}
+
+.nav-links li{
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.nav-link:hover{
+    color: #AE3236;
+}
+
+.nav-link{
+    cursor: pointer;
+    color: #fff;
+    /*mix-blend-mode: difference;*/
+}
+
+li, a, button{
+    font-weight: bold;
+    font-size: 2vh;
+    text-decoration: none;
+    color: white;
+    mix-blend-mode: difference;
+}
+
+/* SECTIONS */
+.section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    scroll-behavior: smooth;
+    overflow-x: clip;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* overflow: hidden; Hide any content that overflows */
+}
+
+
+/* HOME SECTION */
+#Home{
+    background: black url('../../images/images/Rectangle 58.png') no-repeat 0% 0%;
+    /*background-size: cover;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /*position: relative;*/
+    text-align: center;
+    /* overflow-y: clip; */
+}
+
+button{
+    padding: 9px 25px;
+    background-color: rgba(150, 150, 150, 0.43);
+    border: none;
+    border-radius: 1vh;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover{
+    background-color: rgba(234, 60, 60, 0.2);
+}
+
+
+header{
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    align-items: center;
+    padding: 1% 6%;
+    width: 100vw;
+}
+
+#Home-title, #Home-description {
+    position: absolute;
+    text-align: center;
+    color: white;
+    margin-top: 0;
+}
+
+#Home-title {
+    top: 18%;
+    font-family: Alwakalat-Font-ExtraBold, serif;
+    font-size: 4.5vh;
+    font-weight: bolder;
+    margin-bottom: 1%;
+}
+
+#Home-description {
+    top: 25%;
+    font-family: Alwakalat-Font-Medium, serif;
+    font-size: 3vh;
+}
+
+#Home .buttons{
+    position: absolute;
+    top: 33%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* margin: auto; */
+    width: 30%
+}
+
+
+
+.buttons button{
+    border-radius: 2vh;
+    font-size: 2vh;
+    padding: 4% 2%;
+    width: 45%;
+}
+
+#images{
+    position: absolute;
+    top: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 25%;
+    /*z-index: 2;*/
+    /*height: 50%;*/
+    /* transform: translateY(-120%); */
+    /*box-sizing: border-box;*/
+}
+
+#center{
+    position: absolute;
+    width: 80%;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1)0.5s;
+    /*transform: translateY(1%);*/
+    z-index: 2;
+}
+
+#first-right, #first-left{
+    position: absolute;
+    width: 65%;
+    z-index: 1;
+}
+
+#first-right{
+    transform: translateX(80%);
+}
+
+#first-left{
+    transform: translateX(-80%);
+}
+
+#second-right, #second-left{
+    position: absolute;
+    width: 50%;
+    z-index: 0;
+}
+
+#second-right{
+    transform: translateX(190%);
+}
+
+#second-left{
+    transform: translateX(-190%);
+}
+
+/* DOWNLOAD SECTION */
+
+
+/* PROJECT SECTION */
+#Project, #Partners {
+    background: black url('../../images/images/Rectangle 58.png') no-repeat 0% 0%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: white;
+}
+
+#Project-title, #Partners-title{
+    position: absolute;
+    opacity: 0;
+    /*top: 10%;*/
+    left: -20%;
+    margin-top: 17%;
+    /*margin-left: 5%;*/
+}
+
+/* PARTNERS SECTION */
+
+
+/* ALWAKALAT CARD SECTION */
+
+
+/* TEAM SECTION */
+
+
+/* CONTACT US SECTION */
+
+
+@media screen and (max-width: 1920px){
+
+    header{
+        padding: 1% 6%;
+    }
+
+    .buttons{
+        margin-bottom: 5%;
+    }
+
+    #images{
+        top: 90%;
+        /* left: 36%; */
+        width: 23%;
+        /* transform: translateY(-15%); */
+    }
+}
+
+@media screen and (max-width: 600px){
+    body{
+        align-items: center;
+        /*background: black url('../images/images/Rectangle 58.png') no-repeat 0% 0%;*/
+        /*background-size: cover;*/
+        /*object-fit: contain;*/
+        /*padding: 2%;*/
+    }
+
+    header{
+        display: none;
+    }
+
+    /* Top Navigation Bar*/
+    #mobile-bar {
+        position: fixed;
+        z-index: 100;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: fit-content;
+
+        /*margin: 2%;*/
+        padding: 2%;
+        box-sizing: border-box;
+        /* background-color: white; */
+    }
+
+    /*header{*/
+    /*    position: fixed;*/
+    /*    z-index: 100;*/
+    /*    display: flex;*/
+    /*    justify-content: space-between;*/
+    /*    box-sizing: border-box;*/
+    /*    align-items: center;*/
+    /*    padding: 1% 6%;*/
+    /*    width: 100vw;*/
+    /*}*/
+
+    /*header{*/
+    /*    position: fixed;*/
+    /*    z-index: 100;*/
+    /*    display: flex;*/
+    /*    justify-content: space-between;*/
+    /*    box-sizing: border-box;*/
+    /*    align-items: center;*/
+    /*    padding: 1% 6%;*/
+    /*    width: 100vw;*/
+    /*}*/
+
+    /* Top Left Dropdown menu */
+    #menu {
+        width: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .hamburger {
+        padding: 10px;
+    }
+
+    .bar {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+
+    #drawer {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        border-radius: 2vh;
+        top: 10vh;
+        left: 0;
+        width: 100%;
+        height: auto;
+        background: rgba(93, 93, 93, 0.96);
+        align-items: center;
+        justify-content: flex-start;
+        z-index: 1;
+        overflow-y: auto;
+    }
+
+    #drawer p {
+        color: white;
+        text-decoration: none;
+        font-size: 2vh;
+        font-weight: bold;
+        margin: 20px;
+    }
+
+    #mobile-logo{
+        width: 15%;
+        height: auto;
+    }
+
+    #mobile-bar button{
+        padding: 2% 3%;
+        font-size: 1.5vh;
+        /*height: 50%;*/
+    }
+
+    #mobile-bar button:hover{
+        background-color: rgba(150, 150, 150, 0.43);;
+    }
+
+    /* MOBILE HOME PAGE */
+    /*#Home-title, #Home-description {*/
+    /*    position: absolute;*/
+    /*    text-align: center;*/
+    /*    color: white;*/
+    /*    margin-top: 0;*/
+    /*}*/
+
+    #Home-title {
+        top: 15%;
+        font-size: 3vh;
+        margin-bottom: 1%;
+    }
+
+    #Home-description {
+        top: 23%;
+        font-family: Alwakalat-Font-Medium, serif;
+        font-size: 2vh;
+        margin-bottom: 0;
+    }
+
+    #Home .buttons{
+        position: absolute;
+        top: 30%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        /* margin: auto; */
+        width: 90%
+    }
+
+    .buttons button{
+        border-radius: 1.5vh;
+        font-size: 1.5vh;
+        padding: 4% 3%;
+        width: 48%;
+    }
+
+    #images{
+        position: absolute;
+        top: 80%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        width: 50%;
+
+        /*height: 50%;*/
+        /* transform: scaleY(150%);*/
+        /*box-sizing: border-box;*/
+    }
+
+    #images img{
+        /*transform: scaleY(150%);*/
+    }
+
+    #center{
+        position: absolute;
+        width: 80%;
+        transition: all cubic-bezier(0.19, 1, 0.22, 1)0.5s;
+        transform: scaleY(150%);
+        /*z-index: -1;*/
+
+    }
+
+    /*#first-right, #first-left{*/
+    /*    position: absolute;*/
+    /*    width: 65%;*/
+    /*    z-index: -2;*/
+    /*}*/
+
+    #first-right{
+        transform: translateX(80%) scaleY(150%);;
+    }
+
+    #first-left{
+        transform: translateX(-80%) scaleY(150%);;
+    }
+
+    /*#second-right, #second-left{*/
+    /*    position: absolute;*/
+    /*    width: 50%;*/
+    /*    z-index: -3;*/
+    /*}*/
+
+    #second-right{
+        transform: translateX(190%) scaleY(150%);;
+    }
+
+    #second-left{
+        transform: translateX(-190%) scaleY(150%);;
+    }
+    /* MOBILE DOWNLOAD APP PAGE */
+
+    /* MOBILE PROJECT PAGE */
+    #Project-title, #Partners-title{
+        position: absolute;
+        opacity: 0;
+        /*top: 10%;*/
+        left: 0;
+        /*margin-top: 17%;*/
+        /*margin-left: 5%;*/
+    }
+    /* MOBILE PARTNERS PAGE */
+    /* MOBILE ALWAKALAT CARD PAGE */
+
+
+    /* MOBILE TEAM PAGE */
+
+    /* MOBILE CONTACT US PAGE */
+
+}
+
+
+

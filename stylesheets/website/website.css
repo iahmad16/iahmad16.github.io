@@ -271,7 +271,7 @@ header{
     }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 800px){
     body{
         align-items: center;
         /*background: black url('../images/images/Rectangle 58.png') no-repeat 0% 0%;*/

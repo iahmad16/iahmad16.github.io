@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/alwakalat_logo.png")">
-        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/styles.css")">
+        <link rel="shortcut icon" type="image/png" href="images/alwakalat_logo.png">
+        <link rel="stylesheet" media="screen" href="stylesheets/website/website.css">
         <title>Alwakalat Testing</title>
     </head>
     <body>
@@ -16,29 +16,29 @@
                     <div class="bar"></div>
                 </div>
                 <div id="drawer">
-                    <p onclick="scrollToPage(`Project`)">The Project</p>
-                    <p onclick="scrollToPage(`Partners`)">Partners</p>
-                    <p onclick="scrollToPage(`AlwakalatCard`)">Alwakalat Card</p>
-                    <p onclick="scrollToPage(`Team`)">Team</p>
-                    <p onclick="scrollToPage(`ContactUs`)">Contact Us</p>
+                    <p onclick="scrollToPage(`Project`,true)">The Project</p>
+                    <p onclick="scrollToPage(`Partners`,true)">Partners</p>
+                    <p onclick="scrollToPage(`AlwakalatCard`,true)">Alwakalat Card</p>
+                    <p onclick="scrollToPage(`Team`,true)">Team</p>
+                    <p onclick="scrollToPage(`ContactUs`,true)">Contact Us</p>
                 </div>
             </div>
-            <img id="mobile-logo" onclick="scrollToPage(`Home`)" src="@routes.Assets.versioned("images/images/alwakalat_logo.png")" alt="Alwakalat logo">
-            <button onclick="scrollToPage(`DownloadApp`)">Get the app</button>
+            <img id="mobile-logo" onclick="scrollToPage(`Home`,false)" src="images/images/alwakalat_logo.png" alt="Alwakalat logo">
+            <button onclick="scrollToPage(`DownloadApp`,false)">Get the app</button>
         </div>
 
         <header>
-            <img id="logo" onclick="scrollToPage(`Home`)" src="@routes.Assets.versioned("images/images/alwakalat_logo.png")" alt="Alwakalat logo">
+            <img id="logo" onclick="scrollToPage(`Home`,false)" src="images/images/alwakalat_logo.png" alt="Alwakalat logo">
             <nav>
                 <ul class="nav-links">
-                    <li><p id="Project-Nav" class="nav-link" onclick="scrollToPage(`Project`)">The Project</p></li>
-                    <li><p id="Partners-Nav" class="nav-link" onclick="scrollToPage(`Partners`)">Partners</p></li>
-                    <li><p id="AlwakalatCard-Nav" class="nav-link" onclick="scrollToPage(`AlwakalatCard`)">Alwakalat Card</p></li>
-                    <li><p id="Team-Nav" class="nav-link" onclick="scrollToPage(`Team`)">Team</p></li>
-                    <li><p id="ContactUs-Nav" class="nav-link" onclick="scrollToPage(`ContactUs`)">Contact Us</p></li>
+                    <li><p id="Project-Nav" class="nav-link" onclick="scrollToPage(`Project`,false)">The Project</p></li>
+                    <li><p id="Partners-Nav" class="nav-link" onclick="scrollToPage(`Partners`,false)">Partners</p></li>
+                    <li><p id="AlwakalatCard-Nav" class="nav-link" onclick="scrollToPage(`AlwakalatCard`,false)">Alwakalat Card</p></li>
+                    <li><p id="Team-Nav" class="nav-link" onclick="scrollToPage(`Team`,false)">Team</p></li>
+                    <li><p id="ContactUs-Nav" class="nav-link" onclick="scrollToPage(`ContactUs`,false)">Contact Us</p></li>
                 </ul>
             </nav>
-            <button onclick="scrollToPage(`DownloadApp`)">Get the app</button>
+            <button onclick="scrollToPage(`DownloadApp`,false)">Get the app</button>
         </header>
 
         <main>
@@ -47,16 +47,16 @@
                 <h3 id="Home-description">Discover a New Era of Automotive Convenience</h3>
                 <br>
                 <div class="buttons">
-                    <button onclick="scrollToPage(`DownloadApp`)" style="display: flex; align-items: center; justify-content: center;"><img  src="@routes.Assets.versioned("images/images/apple.png")" alt="appstore" style="width: 8%; margin-right: 5%; padding: 0;">Download The App</button>
-                    <button onclick="scrollToPage(`AlwakalatCard`)">Get The Alwakalat Card</button>
+                    <button onclick="scrollToPage(`DownloadApp`,false)" style="display: flex; align-items: center; justify-content: center;"><img  src="images/images/apple.png" alt="appstore" style="width: 8%; margin-right: 5%; padding: 0;">Download The App</button>
+                    <button onclick="scrollToPage(`AlwakalatCard`,false)">Get The Alwakalat Card</button>
                 </div>
 
                 <div id="images">
-                    <img id="second-left" src="@routes.Assets.versioned("images/images/Second left_.png")" alt="Alwakalat App">
-                    <img id="first-left" src="@routes.Assets.versioned("images/images/First left_.png")" alt="Alwakalat App">
-                    <img id="center" src="@routes.Assets.versioned("images/images/center_.png")" alt="Alwakalat App">
-                    <img id="first-right" src="@routes.Assets.versioned("images/images/First right_.png")" alt="Alwakalat App">
-                    <img id="second-right" src="@routes.Assets.versioned("images/images/Second right_.png")" alt="Alwakalat App">
+                    <img id="second-left" src="images/images/Second left_.png" alt="Alwakalat App">
+                    <img id="first-left" src="images/images/First left_.png" alt="Alwakalat App">
+                    <img id="center" src="images/images/center_.png" alt="Alwakalat App">
+                    <img id="first-right" src="images/images/First right_.png" alt="Alwakalat App">
+                    <img id="second-right" src="images/images/Second right_.png" alt="Alwakalat App">
                 </div>
             </section>
 
@@ -65,19 +65,19 @@
                     <h1>Download the App Now</h1>
                     <h3>Explore a variety of curated used and new cars, and enjoy exclusive discounts from service providers with the Alwakalat Card.</h3>
                     <div class="buttons">
-                        <button onclick="scrollToPage(`DownloadApp`)" style="display: flex; align-items: center; justify-content: center;"><img  src="@routes.Assets.versioned("images/images/apple.png")" alt="appstore" style="width: 8%; margin-right: 5%; padding: 0;">Download The App</button>
-                        <button onclick="scrollToPage(`AlwakalatCard`)" >Get the Alwakalat Card</button>
+                        <button onclick="scrollToPage(`DownloadApp`,false)" style="display: flex; align-items: center; justify-content: center;"><img  src="images/images/apple.png" alt="appstore" style="width: 8%; margin-right: 5%; padding: 0;">Download The App</button>
+                        <button onclick="scrollToPage(`AlwakalatCard`,false)" >Get the Alwakalat Card</button>
                     </div>
                 </div>
                 <div id="red-box"></div>
             </section>
 
             <section id="Project" class="section">
-                <h1>The Project</h1>
+                <h1 id="Project-title">The Project</h1>
             </section>
 
             <section id="Partners" class="section">
-                <h1>Partners</h1>
+                <h1 id="Partners-title">Partners</h1>
             </section>
 
             <section id="AlwakalatCard" class="section">
@@ -98,55 +98,55 @@
                     <br>
                     <div id="team-list">
                         <div class="team-member">
-                            <img class="team-member-picture"  src="@routes.Assets.versioned("images/images/Group 152.png")" alt="Team Member">
+                            <img class="team-member-picture"  src="images/images/Group 152.png" alt="Team Member">
                             <div class="team-member-details" style="display: flex; flex-direction: column">
                                 <p class="team-member-name">Omar Shamiyeh</p>
-                                <hr width="30%" size="8" color="black" style="margin: 3% 0">
+                                <hr width="30%" size="4" color="black" style="margin: 3% 0">
                                 <p class="team-member-role">Founder</p>
                             </div>
                         </div>
 
                         <div class="team-member">
-                            <img class="team-member-picture" src="@routes.Assets.versioned("images/images/Group 153.png")" alt="Team Member">
+                            <img class="team-member-picture" src="images/images/Group 153.png" alt="Team Member">
                             <div class="team-member-details" style="display: flex; flex-direction: column">
                                 <p class="team-member-name">Khalid Al Boanin</p>
-                                <hr width="30%" size="8" color="black" style="margin: 3% 0">
+                                <hr width="30%" size="4" color="black" style="margin: 3% 0">
                                 <p class="team-member-role">Partner</p>
                             </div>
                         </div>
 
                         <div class="team-member">
-                            <img class="team-member-picture" src="@routes.Assets.versioned("images/images/Group 154.png")" alt="Team Member">
+                            <img class="team-member-picture" src="images/images/Group 154.png" alt="Team Member">
                             <div class="team-member-details" style="display: flex; flex-direction: column">
                                 <p class="team-member-name">Nawfal Rihani</p>
-                                <hr width="30%" size="8" color="black" style="margin: 3% 0">
+                                <hr width="30%" size="4" color="black" style="margin: 3% 0">
                                 <p class="team-member-role">Art Director</p>
                             </div>
                         </div>
 
                         <div class="team-member">
-                            <img class="team-member-picture" src="@routes.Assets.versioned("images/images/Group 155.png")" alt="Team Member">
+                            <img class="team-member-picture" src="images/images/Group 155.png" alt="Team Member">
                             <div class="team-member-details" style="display: flex; flex-direction: column">
                                 <p class="team-member-name">Hasan Shamiyeh</p>
-                                <hr width="30%" size="8" color="black" style="margin: 3% 0">
+                                <hr width="30%" size="4" color="black" style="margin: 3% 0">
                                 <p class="team-member-role">Technical Project Lead</p>
                             </div>
                         </div>
 
                         <div class="team-member">
-                            <img class="team-member-picture" src="@routes.Assets.versioned("images/images/Group 156.png")" alt="Team Member">
+                            <img class="team-member-picture" src="images/images/Group 156.png" alt="Team Member">
                             <div class="team-member-details" style="display: flex; flex-direction: column">
                                 <p class="team-member-name">Houssam Abdulrazak</p>
-                                <hr width="30%" size="8" color="black" style="margin: 3% 0">
+                                <hr width="30%" size="4" color="black" style="margin: 3% 0">
                                 <p class="team-member-role">Quality Control Specialist</p>
                             </div>
                         </div>
 
                         <div class="team-member">
-                            <img class="team-member-picture" src="@routes.Assets.versioned("images/images/Group 157.png")" alt="Team Member">
+                            <img class="team-member-picture" src="images/images/Group 157.png" alt="Team Member">
                             <div class="team-member-details" style="display: flex; flex-direction: column">
                                 <p class="team-member-name">Ahmad Ghaith</p>
-                                <hr width="30%" size="8" color="black" style="margin: 3% 0">
+                                <hr width="30%" size="4" color="black" style="margin: 3% 0">
                                 <p class="team-member-role">Full Stack Developer</p>
                             </div>
                         </div>
@@ -175,7 +175,7 @@
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="@routes.Assets.versioned("javascripts/script.js")" type="text/javascript"></script>
+        <script src="javascripts/script.js" type="text/javascript"></script>
 
     </body>
 </html>
